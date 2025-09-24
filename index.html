@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>document</title>
+    </head>
+    <body>
+        <div id="heading">
+            <h1>ETCH A SKETCH, DRAW YOUR IMAGINATION.</h1>
+        </div>
+        <!--Sixe modal choosing section-->
+        <dialog id="sizeModal" class="modal">
+            <p>hi there</p>
+            <p>specify the size of grid</p>
+            <div id="rangeDiv">
+                <input type="range"id="sizeSelect" vlaue="10" min="1" max="100">
+            </div>
+            <div id="closeButton">
+                <button id="close" class="button">Close</button>
+            </div>
+        </dialog>
+        <div id="screenContainer">
+            <div id="buttonsGroup" class="buttonsGroup">
+                <button id="chooseSize" class="button">Choose Grid Size</button>
+                <button id="resetState" class="button">Reset</button>
+                <button id="eraseState" class="button">Erase</button>
+                <div class="toggleDiv">
+                    <label class="toggle">
+                        <input type="checkbox" name="color" id="colorSwitch">
+                        <span class="slider"></span>
+                    </label>
+                    <label>Color ON/OFF</label>
+                </div>
+                <div class="colorDiv">
+                    <input type="color" id="colorPicker" value="#000000">
+                </div>
+            </div>
+            <div class="gridContainer">
+                <div class="grid"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
