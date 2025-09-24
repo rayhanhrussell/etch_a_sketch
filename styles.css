@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#screenContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.cell {
+    border: solid 1px; rgb (196, 191, 191);
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600;
+    height: 600;
+}
+
+/*heading section*/
+h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/*button groups arrangemaent*/
+#buttonsGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/*buttons styling*/
+.button {
+    background-color: limegreen;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
