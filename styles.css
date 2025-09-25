@@ -12,7 +12,7 @@
 }
 
 .cell {
-    border: solid 1px; rgb (196, 191, 191);
+    border: solid 1px rgb (196, 191, 191);
 }
 
 #grid{
@@ -42,4 +42,119 @@ h1 {
     border-radius: 10px;
     padding: 10px;
     border: none;
+}
+
+/*button effect style*/
+.button:hover {
+    background-color: #92ee90;
+    color: black;
+    transition: o.6s;
+    height: 80px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.button:focus{
+    transition: o.6s;
+    box-shadow: 5px 5px 2px 2px #92ee90;
+}
+
+.button:active {
+    background-color: #228b22;
+}
+
+/*modal pop up styles */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px #78ab82;
+    border-radius: 8px;
+}
+
+/*modal pop up text*/
+p{
+    margin: 3px 3px;
+    padding: 2px 2px;
+    text-align: center;
+}
+
+/*modal pop up close button style*/
+#closeButton {
+    display: flex;
+    justify-content: center;
+}
+
+#close {
+    width: 40px;
+    height: 30px;
+    padding: 3px;
+}
+
+/*styling slider in modal window*/
+
+#rangeDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#switchLabel, .info {
+    text-align: center;
+}
+
+/*formatting the on/off switch*/
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: o.2s;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #060;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.colorDiv, .toggleDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
