@@ -61,3 +61,88 @@ function createGrid(gSize){
         myGrid.appendChild(gridCell);
     }
 }
+
+//change the slide of the grid in the modal
+sizeValue.oninput = function() {
+    currentSize = this.value;
+    rangeInfo.innerHTML = "The current size of the grid is " + currentSize;
+    removeGrid();
+    createGrid(currentSize);
+}
+
+//function to remove the current grid
+function removeGrid() 
+{
+    myGrid.innerHTML = "";
+}
+
+//function to draw on grid
+function draw(e) 
+{
+    setCurrentColor();
+    if(e.type === "mousedown")
+    {
+        isDrawing = true;
+        e.target.style.backgroundColor = currentColor;
+    }
+
+    else if(e.type === "mouseover" && isDrawing)
+    {
+        e.target.style.backgroundColor = currentColor;
+    }
+
+    else
+    {
+        isDrawing = false;
+    }
+}
+
+//function to erase on the grid
+function eraseDrawing(e) {
+    if(e.type === "click")
+    {
+        isEraseing = true;
+        isDrawing = false;
+        eraseInfo.innerHTML = "Double click to deactivate";
+    }
+
+    else if(e.type === "dblclick")
+    {
+        isEraseing = false;
+        eraseInfo.innerHTML = "ERASE";
+    }
+
+}
+function erase(e){
+    if (e.type === "mouseover" && isEraseing)
+    {
+        e.target.style.backgroundColor = "white";
+    }
+}
+
+//end//
+
+//color function 
+
+function changeColor(){
+    if(this.checked)
+    {
+        colorDrawing = true;
+    }
+    else{
+        colorDrawing = false;
+    }
+}
+
+function setCurrentColor()
+{
+    if(colorDrawing)
+    {
+        currentColor = colorPicker.value;
+    }
+    else{
+        currentColor = DEFAULTCOLOR;
+    }
+}
+
+createGrid(GRIDSIZE);
