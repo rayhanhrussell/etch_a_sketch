@@ -28,7 +28,7 @@ let colorDrawing = false;
 
 //Event handlers
 sizeButton.addEventListener("click",()=> {dialog.showModal()});
-closs.addEventListener("click"()=> dialog.close());
+closs.addEventListener("click", ()=> dialog.close());
 
 
 //Reset Feature added
@@ -36,7 +36,7 @@ resetButton.addEventListener("click", ()=>{
     //removeGrid();
     //createGrid(currentSize)
     document.querySelectorAll("div.cell").forEach((item)=> {
-        item.style.backgroundColor = ""white";
+        item.style.backgroundColor = "white";
     });
 
     });
